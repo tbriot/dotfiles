@@ -65,7 +65,7 @@ LIGHT_MAGENTA="\e[95m"
 NO_COLOR="\[\033[0m\]"
 
 if [ "$color_prompt" = yes ]; then
-    PS1="${debian_chroot:+($debian_chroot)} $LIGHT_BLUE[\$(date +%Y-%m-%d@%H:%M:%S)]\u@\h:$GREEN\w$LIGHT_MAGENTA\$(__git_ps1)$NO_COLOR\n\$ "
+    PS1="${debian_chroot:+($debian_chroot)}$LIGHT_BLUE[\$(date +%Y-%m-%d@%H:%M:%S)]\u@\h:$GREEN\w$LIGHT_MAGENTA\$(__git_ps1)$NO_COLOR\n\$ "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
