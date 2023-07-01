@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e +x
+set -e
 
 # backup directory
 BKP_DIR=~/.bkp_dotfiles
@@ -17,7 +17,9 @@ mkdir -p $BKP_DIR
 cp .bash* .git* $BKP_DIR
 
 # download dotfiles from github repo
-echo -e "${LIGHT_MAGENTA}Download dotfiles from tbriot github repo${ENDCOLOR}"
-wget -O - "https://github.com/tbriot/dotfiles/archive/main.tar.gz" | tar xz
+echo -e "${LIGHT_MAGENTA}Download dotfiles from tbriot github repo...${ENDCOLOR}"
+wget -O - "https://github.com/tbriot/dotfiles/archive/main.tar.gz" 2> /dev/null | tar xz
 cp ./dotfiles-main/.bash* ./dotfiles-main/.git* .
 rm -r ./dotfiles-main
+
+echo -e "${LIGHT_MAGENTA}Dotfiles installed successfully !${ENDCOLOR}"
