@@ -1,0 +1,23 @@
+#!/bin/bash
+
+set -e +x
+
+# backup directory
+BKP_DIR=~/.bkp_dotfiles
+
+LIGHT_MAGENTA="\e[95m"
+ENDCOLOR="\e[0m"
+
+# Change to user HOME directory
+cd
+
+# backup existing dotfiles
+echo -e "${LIGHT_MAGENTA}Backup existing dotfiles in ${BKP_DIR}${ENDCOLOR}"
+mkdir -p $BKP_DIR
+cp .bash* .git* $BKP_DIR
+
+# download dotfiles from github repo
+echo -e "${LIGHT_MAGENTA}Download dotfiles from tbriot github repo${ENDCOLOR}"
+wget -O - "https://github.com/tbriot/dotfiles/archive/main.tar.gz" | tar xz
+cp ./dotfiles-main/.bash* ./dotfiles-main/.git* .
+rm -r ./dotfiles-main
