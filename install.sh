@@ -14,7 +14,16 @@ cd
 # backup existing dotfiles
 echo -e "${LIGHT_MAGENTA}Backup existing dotfiles in ${BKP_DIR}${ENDCOLOR}"
 mkdir -p $BKP_DIR
-cp .bash* .git* $BKP_DIR
+
+if [[ -e  .bash* ]]
+then
+        cp .bash* $BKP_DIR
+fi
+
+if [[ -e  .git* ]]
+then
+        cp .git* $BKP_DIR
+fi
 
 # download dotfiles from github repo
 echo -e "${LIGHT_MAGENTA}Download dotfiles from tbriot github repo...${ENDCOLOR}"
