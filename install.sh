@@ -25,10 +25,15 @@ then
         cp .git* $BKP_DIR
 fi
 
+if [[ -e  .tmux* ]]
+then
+        cp .tmux* $BKP_DIR
+fi
+
 # download dotfiles from github repo
 echo -e "${LIGHT_MAGENTA}Download dotfiles from tbriot github repo...${ENDCOLOR}"
 wget -O - "https://github.com/tbriot/dotfiles/archive/main.tar.gz" 2> /dev/null | tar xz
-cp ./dotfiles-main/.bash* ./dotfiles-main/.git* .
+cp ./dotfiles-main/.bash* ./dotfiles-main/.git* ./dotfiles-main/.tmux* .
 rm -r ./dotfiles-main
 
 echo -e "${LIGHT_MAGENTA}Dotfiles installed successfully !${ENDCOLOR}"
