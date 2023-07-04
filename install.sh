@@ -33,7 +33,13 @@ fi
 # download dotfiles from github repo
 echo -e "${LIGHT_MAGENTA}Download dotfiles from tbriot github repo...${ENDCOLOR}"
 wget -O - "https://github.com/tbriot/dotfiles/archive/main.tar.gz" 2> /dev/null | tar xz
-cp ./dotfiles-main/.bash* ./dotfiles-main/.git* ./dotfiles-main/.tmux* .
+cp ./dotfiles-main/.bash* ./dotfiles-main/.git* ./dotfiles-main/.tmux* ./dotfiles-main/.vim* .
 rm -r ./dotfiles-main
 
 echo -e "${LIGHT_MAGENTA}Dotfiles installed successfully !${ENDCOLOR}"
+
+# Install vim plugin manager "vim-plug"
+# See https://github.com/junegunn/vim-plug
+echo -e "${LIGHT_MAGENTA}Install "vim-plug"${BKP_DIR}${ENDCOLOR}"
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
