@@ -25,7 +25,7 @@ then
         cp .git* $BKP_DIR
 fi
 
-if [[ -e  .tmux* ]]
+if [[ -e  .tmux.conf ]]
 then
         cp .tmux* $BKP_DIR
 fi
