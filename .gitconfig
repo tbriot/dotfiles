@@ -2,9 +2,10 @@
 	name = Thomas Briot
 	email = thomas.briot82@gmail.com
 	username = tbriot
+[credential]
+        helper = cache --timeout=7200
 [init]
 	defaultBranch = main
-
 [alias]
 	a = add --all
 	ai = add -i
