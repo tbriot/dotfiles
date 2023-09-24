@@ -18,8 +18,12 @@ fi
 # Created by newuser for 5.8.1
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+######################################################################################
+# 				Powerlevel10k Zsh theme 
+######################################################################################
+if [ -f $XDG_CONFIG_HOME/p10k/.p10k.zsh ]; then
+  . $XDG_CONFIG_HOME/p10k/.p10k.zsh 
+fi
 
 ######################################################################################
 # 				Key bindings 
