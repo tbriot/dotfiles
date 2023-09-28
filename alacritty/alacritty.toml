@@ -1,2 +1,6 @@
+[shell]
+program = "/bin/zsh"
+args = [ "-l" , "-c" , "tmux attach || tmux" ]
+
 [font.normal]
 family = "MesloLGS NF"
