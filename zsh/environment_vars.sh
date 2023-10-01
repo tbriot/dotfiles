@@ -12,3 +12,5 @@ export TERMINAL=/usr/local/bin/alacritty
 
 # Add Golang binary to path
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
+
+export GOPATH=~/go
