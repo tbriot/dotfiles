@@ -11,4 +11,4 @@ export XDG_STATE_HOME=$HOME/.local/state
 export TERMINAL=/usr/local/bin/alacritty
 
 # Add Golang binary to path
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
