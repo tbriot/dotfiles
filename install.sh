@@ -1,4 +1,19 @@
-#!/usr/bin/env bash
-cp .zshenv $HOME
-cp -R ./alacritty ./git ./nvim ./p10k ./tmux ./zsh $XDG_CONFIG_HOME 
-cp -R ./i3/i3 ./i3/i3status $XDG_CONFIG_HOME 
+#!/usr/bin/env zsh
+
+
+if [[ -z $STOW_FOLDERS ]]; then
+    STOW_FOLDERS="alacritty,git,i3,nvim,p10k,tmux,zsh"
+fi
+
+if [[ -z $DOTFILES ]]; then
+    DOTFILES=$HOME/.dotfiles
+fi
+
+cd $DOTFILES
+for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
+do
+    echo "stow $folder"
+    stow -D $folder
+    stow $folder
+done
+cd -
