@@ -1,2 +1,0 @@
-- copy .zshenv file in $HOME directory
-- copy all other files in $HOME/.config/zsh directory
