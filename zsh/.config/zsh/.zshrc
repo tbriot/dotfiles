@@ -52,3 +52,10 @@ fi
 if [ -f $ZDOTDIR/ssh-agent.sh ]; then
   . $ZDOTDIR/ssh-agent.sh
 fi
+
+######################################################################################
+# 		    Zsh autosuggestions 
+######################################################################################
+if [ -f ~/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+  . ~/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
