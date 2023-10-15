@@ -2,7 +2,7 @@
 
 
 if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="alacritty,git,i3,nvim,p10k,tmux,zsh"
+    STOW_FOLDERS="alacritty,git,i3,nvim,p10k,ssh,tmux,zsh"
 fi
 
 if [[ -z $DOTFILES ]]; then
