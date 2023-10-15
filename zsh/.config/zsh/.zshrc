@@ -16,7 +16,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Created by newuser for 5.8.1
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+source ~/zsh-plugins/powerlevel10k/powerlevel10k.zsh-theme
 
 ######################################################################################
 # 				Powerlevel10k Zsh theme 
@@ -56,6 +56,6 @@ fi
 ######################################################################################
 # 		    Zsh autosuggestions 
 ######################################################################################
-if [ -f ~/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-  . ~/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [ -f ~/zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+  . ~/zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
