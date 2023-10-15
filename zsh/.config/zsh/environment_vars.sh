@@ -17,6 +17,3 @@ export TERMINAL=/usr/local/bin/alacritty
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 
 export GOPATH=~/go
-
-# Add neovim bin directory to path
-export PATH=$PATH:$HOME/neovim/bin
