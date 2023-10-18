@@ -197,10 +197,10 @@ for_window [class="Alacritty"] move to workspace $ws1
 for_window [class="firefox"] move to workspace $ws2
 
 # Put workspaces on specific screen
-workspace $ws1 output DVI-I-1
-workspace $ws2 output DVI-I-2
-workspace $ws3 output DVI-I-1
-workspace $ws4 output DVI-I-2
+workspace $ws1 output DVI-I-2
+workspace $ws2 output DVI-I-3
+workspace $ws3 output DVI-I-2
+workspace $ws4 output DVI-I-3
 
 # launch app at startup
 exec alacritty
