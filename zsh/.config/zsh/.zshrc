@@ -59,3 +59,10 @@ fi
 if [ -f ~/zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
   . ~/zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
+
+
+######################################################################################
+# 		    fzf 
+######################################################################################
+. /usr/share/doc/fzf/examples/key-bindings.zsh
+. /usr/share/doc/fzf/examples/completion.zsh
