@@ -4,3 +4,9 @@ args = [ "-l" , "-c" , "tmux attach || tmux" ]
 
 [font.normal]
 family = "MesloLGS NF"
+
+[keyboard]
+bindings=[
+    {key="C", mods="Control", action="Copy"},
+    {key="V", mods="Control", action="Paste"}
+    ]
