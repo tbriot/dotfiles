@@ -7,6 +7,6 @@ family = "MesloLGS NF"
 
 [keyboard]
 bindings=[
-    {key="C", mods="Control", action="Copy"},
+    {key="C", mods="Control|Shift", action="Copy"},
     {key="V", mods="Control", action="Paste"}
     ]
