@@ -8,10 +8,16 @@ export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 export XDG_BIN_HOME=$HOME/.local/bin
 
-export PATH=$XDG_BIN_HOME:~/.local/scripts:$PATH 
-
 # Set terminal
 export TERMINAL=/usr/local/bin/alacritty
+
+# Git's text editor
+export EDITOR='nvim'
+
+######################################################################################
+# 			PATH
+######################################################################################
+export PATH=$XDG_BIN_HOME:~/.local/scripts:$PATH 
 
 # Add Golang binary to path
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
