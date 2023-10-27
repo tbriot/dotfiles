@@ -1,4 +1,13 @@
+-- cursor is a vertical line in edit mode, a block otherwise
 vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor2"
+
+-- highlight yanked text for 200ms using the "Visual" highlight group
+vim.cmd[[
+augroup highlight_yank
+autocmd!
+au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=200})
+augroup END
+]]
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
