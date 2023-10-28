@@ -13,6 +13,8 @@ export TERMINAL=/usr/local/bin/alacritty
 
 # Git's text editor
 export EDITOR='nvim'
+# bind zsh to standard Emacs bindings
+bindkey -e
 
 ######################################################################################
 # 			PATH
