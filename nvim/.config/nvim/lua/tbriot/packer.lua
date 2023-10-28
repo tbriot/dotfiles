@@ -11,9 +11,13 @@ return require('packer').startup(function(use)
   use('tpope/vim-fugitive')
   use('airblade/vim-gitgutter')
 
+  -- Fuzzy finder
   use {
       'nvim-telescope/telescope.nvim', tag = '0.1.4',
-      requires = { {'nvim-lua/plenary.nvim'} }
+      requires = {
+          {'nvim-lua/plenary.nvim'}, 
+          {'BurntSushi/ripgrep'}
+      }
   }
 
   use({ 'rose-pine/neovim', as = 'rose-pine' ,
