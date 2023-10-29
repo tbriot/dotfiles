@@ -4,35 +4,33 @@
 vim.cmd [[packadd packer.nvim]]
 --
 return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
 
-  -- Git plugins
-  use('tpope/vim-fugitive')
-  use('airblade/vim-gitgutter')
+    -- Theme
+    use({ 'rose-pine/neovim', as = 'rose-pine' ,
+        config = function()
+            vim.cmd('colorscheme rose-pine')
+        end
+    })
 
-  -- Fuzzy finder
-  use {
-      'nvim-telescope/telescope.nvim', tag = '0.1.4',
-      requires = {
-          {'nvim-lua/plenary.nvim'}, 
-          {'BurntSushi/ripgrep'}
-      }
-  }
+    -- Git plugins
+    use('tpope/vim-fugitive')
+    use('airblade/vim-gitgutter')
 
-  use({ 'rose-pine/neovim', as = 'rose-pine' ,
-  config = function()
-      vim.cmd('colorscheme rose-pine')
-  end
-     })
-
-     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-     use('theprimeagen/harpoon')
-     use('mbbill/undotree')
+    -- Fuzzy finder
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.4',
+        requires = {
+            {'nvim-lua/plenary.nvim'}, 
+            {'BurntSushi/ripgrep'}
+        }
+    }
 
     -- LSP Servers    
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
+
     -- LSP Support    
     use { 'VonHeikemen/lsp-zero.nvim', branch = 'v3.x' }
     
@@ -46,4 +44,9 @@ return require('packer').startup(function(use)
         'hrsh7th/nvim-cmp',
         requires = { {'L3MON4D3/LuaSnip'} }
     }
+
+    -- Others
+    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use('theprimeagen/harpoon')
+    use('mbbill/undotree')
 end)
