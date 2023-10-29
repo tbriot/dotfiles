@@ -9,7 +9,18 @@ lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
+-- Install language servers
+require('mason').setup({})
+require('mason-lspconfig').setup({
+    ensure_installed = {'gopls', 'terraformls'},
+    handlers = {
+        lsp_zero.default_setup,
+    }
+})
+
+-- Configure language servers
 require('lspconfig').gopls.setup({})
+require('lspconfig').terraformls.setup({})
 
 ---------------------
 --  Autocompletion
@@ -20,7 +31,7 @@ local cmp_action = require('lsp-zero').cmp_action()
 cmp.setup({
   mapping = cmp.mapping.preset.insert({
     -- `Enter` key to confirm completion
-    ['<CR>'] = cmp.mapping.confirm({select = false}),
+    ['<CR>'] = cmp.mapping.confirm({select = true}),
 
     -- Ctrl+Space to trigger completion menu
     ['<C-Space>'] = cmp.mapping.complete(),
