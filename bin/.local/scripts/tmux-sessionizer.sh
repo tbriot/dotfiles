@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$({ find ~/development/tbriot -mindepth 1 -maxdepth 1 -type d; echo ~/.dotfiles } | fzf)
+    selected=$({ find ~/development -mindepth 2 -maxdepth 2 -type d; echo ~/.dotfiles } | fzf)
 fi
 
 if [[ -z $selected ]]; then
