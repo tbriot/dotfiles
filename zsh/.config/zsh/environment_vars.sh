@@ -17,7 +17,9 @@ export EDITOR='nvim'
 ######################################################################################
 # 			PATH
 ######################################################################################
-export PATH=$XDG_BIN_HOME:~/.local/scripts:$PATH 
+export PATH=~/bin:$PATH
+export PATH=~/.local/scripts:$PATH
+export PATH=$XDG_BIN_HOME:$PATH
 
 # Add Golang binary to path
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
