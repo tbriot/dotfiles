@@ -1,6 +1,9 @@
 ######################################################################################
 # 			key bindings
 ######################################################################################
+# bind zsh to standard Emacs bindings
+set -o emacs
+
 bindkey ";5C" forward-word
 bindkey ";5D" backward-word
 
