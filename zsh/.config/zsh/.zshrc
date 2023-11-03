@@ -53,9 +53,14 @@ if [ -f ~/zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
   . ~/zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
-
 ######################################################################################
 # 		    fzf 
 ######################################################################################
-. /usr/share/doc/fzf/examples/key-bindings.zsh
-. /usr/share/doc/fzf/examples/completion.zsh
+if [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]; then
+  . /usr/share/doc/fzf/examples/key-bindings.zsh
+fi
+
+if [ -f /usr/share/doc/fzf/examples/completion.zsh ]; then
+  . /usr/share/doc/fzf/examples/completion.zsh
+fi
+
