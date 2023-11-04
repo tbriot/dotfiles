@@ -64,3 +64,8 @@ if [ -f /usr/share/doc/fzf/examples/completion.zsh ]; then
   . /usr/share/doc/fzf/examples/completion.zsh
 fi
 
+
+######################################################################################
+# 		    Start tmux 
+######################################################################################
+[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
