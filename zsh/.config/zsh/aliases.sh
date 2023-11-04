@@ -22,3 +22,5 @@ alias tfi='tf init'
 alias tfo='tf output'
 alias tfp='tf plan'
 alias tfv='tf validate'
+
+alias tfs='tfswitch'
