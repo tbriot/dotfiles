@@ -30,8 +30,11 @@
 	c = commit
 	ca = commit -a
 	cm = commit -m
+	cms = commit --signoff -m
 	cam = commit -am
+	cams = commit --signoff -am
 	cem = commit --allow-empty -m
+	cems = commit --signoff --allow-empty -m
 	cd = commit --amend
 	cad = commit -a --amend
 	ced = commit --allow-empty --amend
