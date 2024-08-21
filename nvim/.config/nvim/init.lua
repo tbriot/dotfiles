@@ -1,1 +1,1 @@
-require("tbriot")
+require("config.lazy")
