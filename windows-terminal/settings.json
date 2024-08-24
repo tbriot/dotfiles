@@ -66,8 +66,7 @@
                 "source": "Windows.Terminal.Wsl"
             },
             {
-                "backgroundImage": "C:\\Users\\thoma\\Pictures\\wallpapers\\dark_wallpaper.jpg",
-                "backgroundImageOpacity": 1.4,
+                "bellStyle": "none",
                 "colorScheme": "Nord",
                 "font": 
                 {
@@ -77,7 +76,7 @@
                 "guid": "{51856cb2-8cce-5362-8f54-464b92b32386}",
                 "hidden": false,
                 "name": "Ubuntu",
-                "opacity": 101,
+                "opacity": 100,
                 "source": "CanonicalGroupLimited.Ubuntu_80rhkp1fndgsc",
                 "useAcrylic": true
             }
@@ -96,7 +95,7 @@
             "brightPurple": "#B4010E",
             "brightRed": "#E74857",
             "brightWhite": "#F3F2F2",
-            "brightYellow": "#F10F1A5",
+            "brightYellow": "#10F1A5",
             "cursorColor": "#FFFFFF",
             "cyan": "#4A96DD",
             "foreground": "#CCCCCC",
@@ -119,7 +118,7 @@
             "brightPurple": "#B4010E",
             "brightRed": "#E74857",
             "brightWhite": "#F3F2F2",
-            "brightYellow": "#F10F1A5",
+            "brightYellow": "#EBCB9B",
             "cursorColor": "#FFFFFF",
             "cyan": "#4A96DD",
             "foreground": "#CCCCCC",
@@ -180,7 +179,7 @@
         {
             "background": "#FAFAFA",
             "black": "#384A42",
-            "blue": "#185BC",
+            "blue": "#0184BC",
             "brightBlack": "#5F525D",
             "brightBlue": "#62AFEF",
             "brightCyan": "#57B5C1",
@@ -190,7 +189,7 @@
             "brightWhite": "#FFFFFF",
             "brightYellow": "#E5C07A",
             "cursorColor": "#5F525D",
-            "cyan": "#998B3",
+            "cyan": "#0997B3",
             "foreground": "#384A42",
             "green": "#51A14F",
             "name": "One Half Light",
