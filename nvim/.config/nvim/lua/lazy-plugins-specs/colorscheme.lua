@@ -1,7 +1,7 @@
 return {
     {
 	"catppuccin/nvim",
-	enabled = false, -- I prefer 'habamax' built-in neovim color scheme
+	enabled = true,
 	name = "catppuccin",
 	priority = 1000,
 	opts = {
