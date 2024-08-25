@@ -19,3 +19,7 @@ vim.keymap.set("n", "<leader>gP", ":Neogit push<CR>",
 vim.keymap.set("n", "<leader>gl", ":Neogit log<CR>",
         {silent =true, noremap= true}
 )
+
+vim.keymap.set("n", "<leader>gb", ":Neogit branch<CR>",
+        {silent =true, noremap= true}
+)
