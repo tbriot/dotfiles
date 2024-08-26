@@ -32,6 +32,9 @@ return {
     mapneogit("<leader>gp", { "pull" }, "[G]it [p]ull")
     mapneogit("<leader>gP", { "push" }, "[G]it [P]ush")
     mapneogit("<leader>gb", { "branch" }, "[G]it [B]ranch")
-
+    
+    -- Diffview
+    vim.keymap.set("n", "<leader>gd", ":DiffviewOpen<CR>", {})
+    vim.keymap.set("n", "<leader>gh", ":DiffviewFileHistory<CR>", {})
   end,
 }
