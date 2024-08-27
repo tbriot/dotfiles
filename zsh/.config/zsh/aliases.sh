@@ -23,4 +23,4 @@ alias tfo='tf output'
 alias tfp='tf plan'
 alias tfv='tf validate'
 
-alias tfs='PATH="/usr/local/bin" tfswitch'
+alias tfs='tfswitch -b ${HOME}/.local/bin/terraform'
