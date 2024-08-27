@@ -20,6 +20,9 @@ export EDITOR='nvim'
 # Neovim
 path=(/opt/nvim/bin $path)
 
+# NVM (Node Version Manager)
+path=($HOME/.config/nvm $path)
+
 # Golang
 path=(/usr/local/go/bin $path)
 path=(~/go/bin $path)

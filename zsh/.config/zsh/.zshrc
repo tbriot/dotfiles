@@ -64,6 +64,10 @@ if [ -f /usr/share/doc/fzf/examples/completion.zsh ]; then
   . /usr/share/doc/fzf/examples/completion.zsh
 fi
 
+######################################################################################
+# 		    Node Version Manager
+######################################################################################
+[[ -s $HOME/.config/nvm/nvm.sh ]] && . $HOME/.config/nvm/nvm.sh  # This loads NVM
 
 ######################################################################################
 # 		    Start tmux 
