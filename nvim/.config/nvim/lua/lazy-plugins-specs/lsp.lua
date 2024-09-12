@@ -7,7 +7,7 @@ return {
     config = function()
         -- Format code before writing the buffer to the file
         vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-            pattern = { "*.lua", "*.tf", "*.tfvars" },
+            pattern = { "*.lua", "*.tf", "*.tfvars", "*.json", "*.yaml", "*.yml" },
             callback = function()
                 vim.lsp.buf.format()
             end,
@@ -15,7 +15,7 @@ return {
 
         -- Enable the following language servers
         -- Feel free to add/remove any LSPs that you want here. They will automatically be installed
-        local servers = { "lua_ls", "terraformls" }
+        local servers = { "lua_ls", "terraformls", "jsonls", "yamlls" }
 
         -- Setup mason so it can manage external tooling
         require('mason').setup()
@@ -27,5 +27,13 @@ return {
 
         require('lspconfig').lua_ls.setup {}
         require('lspconfig').terraformls.setup {}
+        require('lspconfig').yamlls.setup {}
+        --Enable (broadcasting) snippet capability for completion
+        local capabilities = vim.lsp.protocol.make_client_capabilities()
+        capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+        require 'lspconfig'.jsonls.setup {
+            capabilities = capabilities,
+        }
     end,
 }
