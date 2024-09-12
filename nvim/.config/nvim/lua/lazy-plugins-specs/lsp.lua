@@ -7,7 +7,7 @@ return {
     config = function()
         -- Format code before writing the buffer to the file
         vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-            pattern = { "*.lua", "*.tf", "*.tfvars", "*.json", "*.yaml", "*.yml" },
+            pattern = { "*.lua", "*.tf", "*.tfvars", "*.json", "*.yaml", "*.yml", "*.py" },
             callback = function()
                 vim.lsp.buf.format()
             end,
@@ -28,6 +28,7 @@ return {
         require('lspconfig').lua_ls.setup {}
         require('lspconfig').terraformls.setup {}
         require('lspconfig').yamlls.setup {}
+        require('lspconfig').pyright.setup {}
         --Enable (broadcasting) snippet capability for completion
         local capabilities = vim.lsp.protocol.make_client_capabilities()
         capabilities.textDocument.completion.completionItem.snippetSupport = true
