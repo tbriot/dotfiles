@@ -7,7 +7,7 @@ return {
     config = function()
         -- Format code before writing the buffer to the file
         vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-            pattern = { "*.lua", "*.tf", "*.tfvars", "*.json", "*.yaml", "*.yml", "*.py", "*.sh", "*.bash" },
+            pattern = { "*.lua", "*.tf", "*.tfvars", "*.json", "*.yaml", "*.yml", "*.py", "*.sh", "*.bash", "*.md" },
             callback = function()
                 vim.lsp.buf.format()
             end,
@@ -41,6 +41,7 @@ return {
         require('lspconfig').pyright.setup {}
         require('lspconfig').gitlab_ci_ls.setup {}
         require('lspconfig').bashls.setup {}
+        require('lspconfig').marksman.setup {}
         --Enable (broadcasting) snippet capability for completion
         local capabilities = vim.lsp.protocol.make_client_capabilities()
         capabilities.textDocument.completion.completionItem.snippetSupport = true

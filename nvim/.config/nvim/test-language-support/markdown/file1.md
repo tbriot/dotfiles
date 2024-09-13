@@ -15,6 +15,8 @@ Alt-H1
 Alt-H2
 ------
 
+[[#Headers]]
+
 # Emphasis
 
 Emphasis, aka italics, with *asterisks* or _underscores_.
@@ -171,7 +173,6 @@ Quote break.
 - [ ] Uranus
 - [ ] Neptune
 - [ ] Comet Haley
-
 
 # Callouts
 
