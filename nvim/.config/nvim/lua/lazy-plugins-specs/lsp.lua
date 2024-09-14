@@ -33,21 +33,12 @@ return {
             ensure_installed = servers,
         }
 
-        require('lspconfig').lua_ls.setup {}
-        require('lspconfig').terraformls.setup {}
-        require('lspconfig').yamlls.setup {
-            filetypes = { "yaml", "yaml.docker-compose" }
-        }
-        require('lspconfig').pyright.setup {}
-        require('lspconfig').gitlab_ci_ls.setup {}
-        require('lspconfig').bashls.setup {}
-        require('lspconfig').marksman.setup {}
-        --Enable (broadcasting) snippet capability for completion
-        local capabilities = vim.lsp.protocol.make_client_capabilities()
-        capabilities.textDocument.completion.completionItem.snippetSupport = true
+        local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-        require 'lspconfig'.jsonls.setup {
-            capabilities = capabilities,
-        }
+        for _, lsp in ipairs(servers) do
+            require('lspconfig')[lsp].setup {
+                capabilities = capabilities,
+            }
+        end
     end,
 }
