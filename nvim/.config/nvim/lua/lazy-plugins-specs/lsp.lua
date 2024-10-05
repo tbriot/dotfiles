@@ -7,7 +7,7 @@ return {
     config = function()
         -- Format code before writing the buffer to the file
         vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-            pattern = { "*.lua", "*.tf", "*.tfvars", "*.json", "*.yaml", "*.yml", "*.py", "*.sh", "*.bash", "*.md" },
+            pattern = { "*.lua", "*.tf", "*.tfvars", "*.json", "*.yaml", "*.yml", "*.py", "*.sh", "*.bash", "*.md", "*.go" },
             callback = function()
                 vim.lsp.buf.format()
             end,
@@ -23,7 +23,7 @@ return {
 
         -- Enable the following language servers
         -- Feel free to add/remove any LSPs that you want here. They will automatically be installed
-        local servers = { "lua_ls", "terraformls", "jsonls", "yamlls", "gitlab_ci_ls", "bashls" }
+        local servers = { "lua_ls", "terraformls", "jsonls", "yamlls", "gitlab_ci_ls", "bashls", "gopls" }
 
         -- Setup mason so it can manage external tooling
         require('mason').setup()
