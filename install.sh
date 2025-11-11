@@ -1,19 +1,8 @@
-#!/usr/bin/env zsh
-
+#!/usr/bin/env bash
 
 if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="alacritty,bin,git,i3,nvim,p10k,ssh,tmux,zsh"
+    STOW_FOLDERS="git ssh"
 fi
 
-if [[ -z $DOTFILES ]]; then
-    DOTFILES=$HOME/.dotfiles
-fi
-
-cd $DOTFILES
-for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
-do
-    echo "stow $folder"
-    stow -D $folder
-    stow $folder
-done
-cd -
+stow -D --target ~ $STOW_FOLDERS
+stow --target ~ $STOW_FOLDERS

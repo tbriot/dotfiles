@@ -8,18 +8,12 @@ export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 export XDG_BIN_HOME=$HOME/.local/bin
 
-# Set terminal
-export TERMINAL=/usr/local/bin/alacritty
-
 # Git's text editor
 export EDITOR='nvim'
 
 ######################################################################################
 # 			PATH
 ######################################################################################
-# Neovim
-path=(/opt/nvim/bin $path)
-
 # NVM (Node Version Manager)
 path=($HOME/.config/nvm $path)
 
