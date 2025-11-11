@@ -23,3 +23,6 @@ alias tfp='tf plan'
 alias tfv='tf validate'
 
 alias tfs='tfswitch -b ${HOME}/.local/bin/terraform'
+
+# Kubectl
+alias k='kubectl'
