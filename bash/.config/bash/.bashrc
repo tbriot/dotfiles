@@ -58,14 +58,20 @@ fi
 ######################################################################################
 #					Pyenv
 ######################################################################################
-eval "$(pyenv init - bash)"
+if command -v pyenv &> /dev/null; then
+    eval "$(pyenv init - bash)"
+fi
 
 ######################################################################################
 #					Starship prompt shell
 ######################################################################################
-eval "$(starship init bash)"
+if command -v starship &> /dev/null; then
+    eval "$(starship init bash)"
+fi
 
 ######################################################################################
-#					Start tmux 
+#					Start tmux
 ######################################################################################
-[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux attach || exec tmux new-session
+fi
