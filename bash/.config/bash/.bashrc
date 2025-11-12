@@ -1,4 +1,4 @@
-export BASHCONFIGDIR="~/.config/bash"
+export BASHCONFIGDIR="$HOME/.config/bash"
 
 ################################################################################
 #					Aliases 
