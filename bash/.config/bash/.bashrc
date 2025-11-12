@@ -1,36 +1,38 @@
+export BASHCONFIGDIR="~/.config/bash"
+
 ################################################################################
 #					Aliases 
 ################################################################################
-if [ -f ./.bash_aliases ]; then
-  . ./.bash_aliases
+if [ -f $BASHCONFIGDIR/.bash_aliases ]; then
+  . $BASHCONFIGDIR/.bash_aliases
 fi
 
 ###############################################################################
 #				Environment variables 
 ###############################################################################
-if [ -f ./.bash_env_vars ]; then
-  . ./.bash_env_vars
+if [ -f $BASHCONFIGDIR/.bash_env_vars ]; then
+  . $BASHCONFIGDIR/.bash_env_vars
 fi
 
 ######################################################################################
 #					Key bindings 
 ######################################################################################
-if [ -f ./key_bindings.sh ]; then
-  . ./key_bindings.sh
+if [ -f $BASHCONFIGDIR/key_bindings.sh ]; then
+  . $BASHCONFIGDIR/key_bindings.sh
 fi
 
 ######################################################################################
 #					Bash history config 
 ######################################################################################
-if [ -f ./history_config.sh ]; then
-  . ./history_config.sh
+if [ -f $BASHCONFIGDIR/history_config.sh ]; then
+  . $BASHCONFIGDIR/history_config.sh
 fi
 
 ######################################################################################
 #					SSH agent 
 ######################################################################################
-if [ -f ./ssh-agent.sh ]; then
-  . ./ssh-agent.sh
+if [ -f $BASHCONFIGDIR/ssh-agent.sh ]; then
+  . $BASHCONFIGDIR/ssh-agent.sh
 fi
 
 ######################################################################################
