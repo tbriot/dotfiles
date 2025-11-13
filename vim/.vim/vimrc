@@ -117,7 +117,7 @@ nnoremap Q <nop>              " Disable Ex mode
 nnoremap <leader><leader> :so %<CR>  " Source current file
 
 " Substitute current word
-nnoremap <leader>s :%s/\<C-r><C-w\>/\<C-r><C-w\>/gI<Left><Left><Left>
+nnoremap <leader>s :%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>
 
 " Make current file executable
 nnoremap <leader>x :!chmod +x %<CR>
@@ -128,33 +128,6 @@ nnoremap <leader>x :!chmod +x %<CR>
 
 " Change project (requires tmux-sessionizer.sh)
 nnoremap <C-f> :silent !tmux neww tmux-sessionizer.sh<CR>
-
-" =============================================================================
-" LSP CONFIGURATION (if using vim-lsp or similar)
-" =============================================================================
-
-" Format with LSP (requires LSP plugin)
-if exists(':LspFormat')
-    nnoremap <leader>f :LspFormat<CR>
-endif
-
-" =============================================================================
-" PLUGIN-SPECIFIC MAPPINGS
-" =============================================================================
-
-" vim-with-me plugin (if installed)
-if exists('g:loaded_vim_with_me')
-    nnoremap <leader>vwm :StartVimWithMe<CR>
-    nnoremap <leader>svwm :StopVimWithMe<CR>
-endif
-
-" CellularAutomaton plugin (if installed)
-if exists('g:loaded_cellular_automaton')
-    nnoremap <leader>mr :CellularAutomaton make_it_rain<CR>
-endif
-
-" Edit packer config (if using packer in Vim)
-nnoremap <leader>vpp :e ~/.dotfiles/nvim/.config/nvim/lua/tbriot/packer.lua<CR>
 
 " =============================================================================
 " STATUS LINE
@@ -174,25 +147,3 @@ set statusline+=%y        " File type
 set statusline+=\ %l/%L   " Line number/total lines
 set statusline+=\ %c      " Column number
 set statusline+=\ %P      " Percent through file
-
-" =============================================================================
-" CUSTOM FUNCTIONS
-" =============================================================================
-
-" Example: Function to make file executable
-function! MakeExecutable()
-    if !executable('chmod')
-        echo "chmod command not found"
-        return
-    endif
-    let l:cmd = 'chmod +x ' . shellescape(expand('%:p'))
-    call system(l:cmd)
-    if v:shell_error == 0
-        echo "Made " . expand('%') . " executable"
-    else
-        echo "Failed to make " . expand('%') . " executable"
-    endif
-endfunction
-
-" Override the mapping with the function
-nnoremap <leader>x :call MakeExecutable()<CR>
