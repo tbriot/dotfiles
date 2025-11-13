@@ -11,7 +11,7 @@ set expandtab       " Use spaces instead of tabs
 set smartindent     " Smart autoindenting
 
 " Display
-set wrap=false      " Don't wrap long lines
+set nowrap          " Don't wrap long lines
 set cursorline      " Highlight current line
 set showmatch       " Show matching brackets
 set showcmd         " Show command in status line
@@ -29,8 +29,8 @@ set signcolumn=yes  " Always show sign column
 set colorcolumn=80  " Show column at 80 characters
 
 " Files and backup
-set swapfile=false  " Don't use swapfile
-set backup=false    " Don't create backup files
+set noswapfile      " Don't use swapfile
+set nobackup        " Don't create backup files
 set undofile        " Enable persistent undo
 set undodir=$HOME/.vim/undodir  " Directory for undo files
 
