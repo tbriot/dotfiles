@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="git ssh bash tmux"
+    STOW_FOLDERS="git ssh bash tmux aws"
 fi
 
 stow -D --target ~ $STOW_FOLDERS
