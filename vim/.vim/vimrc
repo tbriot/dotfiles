@@ -64,11 +64,26 @@ set timeoutlen=500  " Timeout for mappings
     let &t_SI .= "\<Esc>[6 q"
   endif
 
-" Highlight yanked text
+" Highlight yanked text (Vim-compatible version)
 augroup highlight_yank
     autocmd!
-    autocmd TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=200})
+    " Try to highlight yanked text using matchaddpos
+    autocmd TextYankPost * call s:highlight_yank()
 augroup END
+
+function! s:highlight_yank()
+    " Get the yanked text range
+    let l:start = getpos("'[")
+    let l:end = getpos("']")
+
+    " Highlight the yanked region
+    if l:start[2] != 0 && l:end[2] != 0
+        let l:id = matchaddpos('Visual', [[l:start[1], l:start[2], l:end[2] - l:start[2] + 1]])
+
+        " Remove highlight after 200ms
+        call timer_start(200, {-> matchdelete(l:id)})
+    endif
+endfunction
 
 " =============================================================================
 " KEY MAPPINGS (from remap.lua)
