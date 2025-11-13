@@ -43,12 +43,6 @@ if [ -f /usr/share/doc/fzf/examples/key-bindings.bash ]; then
 fi
 
 ######################################################################################
-#					Node Version Manager
-######################################################################################
-[ -s "$NVM_PATH/nvm.sh" ] && \. "$NVM_PATH/nvm.sh"  # This loads nvm
-[ -s "$NVM_PATH/bash_completion" ] && \. "$NVM_PATH/bash_completion"  # This loads nvm bash_completion
-
-######################################################################################
 #					Kubectl
 ######################################################################################
 # Kubectl autocompletion - alias for 'kubectl' is 'k'
