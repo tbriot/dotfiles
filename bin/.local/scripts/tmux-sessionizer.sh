@@ -1,9 +1,9 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$({ find ~/development -mindepth 2 -maxdepth 2 -type d; echo ~/.dotfiles } | fzf)
+    selected=$({ find ~/projects -mindepth 1 -maxdepth 1 -type d; } | fzf)
 fi
 
 if [[ -z $selected ]]; then
