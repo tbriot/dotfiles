@@ -8,6 +8,9 @@ set -o emacs
 bind '"\e[1;5C": forward-word'             # Ctrl+Right Arrow: move cursor forward one word
 bind '"\e[1;5D": backward-word'            # Ctrl+Left Arrow: move cursor backward one word
 
+# Delete the word before the cursor
+bind '"\C-h": backward-delete-word'
+
 # Alternative escape sequences for different terminals
 bind '"\e[5C": forward-word'               # Ctrl+Right Arrow (alternative)
 bind '"\e[5D": backward-word'              # Ctrl+Left Arrow (alternative)
