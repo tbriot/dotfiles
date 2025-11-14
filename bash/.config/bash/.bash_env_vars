@@ -1,0 +1,32 @@
+######################################################################################
+# 			Environment variables
+######################################################################################
+# XDG Base Directory
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_STATE_HOME=$HOME/.local/state
+export XDG_BIN_HOME=$HOME/.local/bin
+
+# Git's text editor
+export EDITOR='vim'
+
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+PYENV_PATH="$PYENV_ROOT/bin"
+
+######################################################################################
+# 			PATH
+######################################################################################
+# NVM (Node Version Manager)
+export NVM_DIR="$HOME/.config/nvm"
+# Cargo (Rust package manager)
+CARGO_PATH="$HOME/.cargo/bin"
+# Golang
+GO_PATH="/usr/local/go/bin:$HOME/go/bin"
+# Local paths
+LOCAL_PATH="$HOME/.local/scripts:$XDG_BIN_HOME:$HOME/bin"
+
+# Build PATH
+export PATH="$PYENV_PATH:$NVM_DIR:$CARGO_PATH:$GO_PATH:$LOCAL_PATH:$PATH"
+export GOPATH=~/go
