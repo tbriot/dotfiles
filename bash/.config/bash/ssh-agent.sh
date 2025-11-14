@@ -1,3 +1,4 @@
+SSH_KEY_PATH="$HOME/.ssh/id_ed25519_tbriot"
 env=~/.ssh/agent.env
 
 agent_load_env () { test -f "$env" && . "$env" >| /dev/null ; }
@@ -13,6 +14,7 @@ agent_run_state=$(ssh-add -l >| /dev/null 2>&1; echo $?)
 
 if [ ! "$SSH_AUTH_SOCK" ] || [ $agent_run_state = 2 ]; then
     agent_start
+    ssh-add $SSH_KEY_PATH
+elif [ "$SSH_AUTH_SOCK" ] && [ $agent_run_state = 1 ]; then
+    ssh-add $SSH_KEY_PATH
 fi
-
-unset env
