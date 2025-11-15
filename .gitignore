@@ -2,3 +2,6 @@
 id_rsa*
 *.pub
 .zcompdump
+
+# Binary files installed in ~/.local/bin
+bin/.local/bin
