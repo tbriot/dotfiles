@@ -68,7 +68,7 @@
 	g = grep -p
 	#############
 	#l = log --oneline
-	l = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
+	l = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -8
 	lg = log --oneline --graph --decorate
 	#############
 	ls = ls-files
