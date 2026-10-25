@@ -161,6 +161,8 @@
 	sb = status -s -b
 	#############
 	sa = stash apply
+	su = stash -u
+	sum = stash push -u -m
 	sc = stash clear
 	sd = stash drop
 	sl = stash list
@@ -209,3 +211,5 @@
 	theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
 	subrepo = !sh -c 'git filter-branch --prune-empty --subdirectory-filter $1 main' -
 	human = name-rev --name-only --refs=refs/heads/*
+[pull]
+	rebase = true

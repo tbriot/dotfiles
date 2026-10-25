@@ -5,3 +5,11 @@ id_rsa*
 
 # Binary files installed in ~/.local/bin
 bin/.local/bin
+
+aws/.aws/*/cache
+
+bin/.local/lib
+bin/.local/share
+
+vim/.vim/swap
+vim/.vim/undodir
