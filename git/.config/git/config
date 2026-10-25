@@ -161,6 +161,8 @@
 	sb = status -s -b
 	#############
 	sa = stash apply
+	su = stash -u
+	sum = stash push -u -m
 	sc = stash clear
 	sd = stash drop
 	sl = stash list
